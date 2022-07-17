@@ -80,7 +80,7 @@ class TTable {
   inline void Increment(const unsigned e, const unsigned f, const double x) {
 // Each thread locks only the part of the table which is writing on. Other threads have access to the rest of the table to update!
 #pragma omp atomic
-    counts[e].find(f)->second += x;.
+    counts[e].find(f)->second += x;
   }
 
   void NormalizeVB(const double alpha) {
